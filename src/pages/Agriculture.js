@@ -1,31 +1,33 @@
 import React, { useState } from "react";
 import '../App.css';
-import { handleDownload } from "../functions";
 
 
 function Agriculture() {
-  //const [setActive] = useState("first");
-  const Ag1 = 'agriculture/seeds.jpg'
-  const Ag2 = 'agriculture/fertilizer.jpg'
-  const Ag3 = 'agriculture/crop.jpg'
+  const [setActive] = useState("first");
 
   return (
     <>
     <button
   className="activeButton"
-  onClick={() => {handleDownload(Ag1)}}
+  onClick={() => {
+    setActive("Seeds");
+  }}
 >
 Seeds
 </button>
 <button
   className="activeButton"
-  onClick={() => {handleDownload(Ag2)}}
+  onClick={() => {
+    setActive("Fertilize");
+  }}
 >
 Fertilize
 </button>
 <button
   className="activeButton"
-  onClick={() => {handleDownload(Ag3)}}
+  onClick={() => {
+    setActive("Crops");
+  }}
 >
 Crops
 </button>
